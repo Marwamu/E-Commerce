@@ -37,7 +37,7 @@ nav {
 }
 
 .searchInput::placeholder {
-    color: lightgray;
+    color: lightgrey;
 }
 
 .limmitedOffer {
@@ -55,7 +55,7 @@ nav {
 .menuItem {
     margin-right: 50px;
     cursor: pointer;
-    color: lightgray;
+    color: lightgrey;
     font-weight: 400;
 }
 .active{
@@ -290,7 +290,7 @@ label{
     width: 20px;
     height: 20px;
     position: absolute;
-    background-color: lightgray;
+    background-color: lightgrey;
     color: white;
     top: 10;
     right: 10;
@@ -470,6 +470,126 @@ footer{
 .copyRight{
     font-weight: 300;
     font-size: 14px;
+}
+
+
+
+@media screen and (max-width : 480px){
+    nav{
+        padding: 20px;
+    }
+
+    .search{
+        display: none;
+    }
+    
+    .navBottom {
+        flex-wrap: wrap;
+    }
+
+    .menuItem {
+        margin: 20px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    .slider {
+        clip-path: none;
+    }
+    
+    .sliderImg {
+        width: 90%;
+    }
+
+    .sliderBg{
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .sliderTitle{
+       font-size: 40px;
+    }
+
+    .sliderPrice{
+        top: unset;
+        left: 0;
+        bottom: -50;
+        background-color: lightgrey;
+
+    }
+    .buyButton{
+        top: unset;
+        bottom: 0;
+        right: 0;
+    }
+
+    .features{
+        display: block;
+    }
+
+    .product{
+        clip-path: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .productImg{
+        width: 80%;
+    }
+
+    .productDetails{
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        top: 0;
+    }
+
+    .productTitle{
+        font-size: 50px;
+        margin: 0;
+    }
+
+    .gallery{
+        display: none;
+    }
+
+    .newSeason{
+        flex-direction: column;
+
+    }
+
+    .nsItem:nth-child(2){
+        padding: 50px;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footerLeft{
+        padding: 20px;
+        width: 90%;
+    }
+    .footerRight{
+        padding: 20px;
+        width: 90%;
+        align-items: center;
+        background-color: whitesmoke;
+    }
+
+    .payment{
+        width: 90%;
+        padding: 20px;
+    }
+
+
+
 }
 
 
