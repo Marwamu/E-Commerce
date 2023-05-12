@@ -92,7 +92,9 @@ const currentProductTitle = document.querySelector(".productTitle");
 const currentProductPrice = document.querySelector(".productPrice");
 const currentProductColors = document.querySelectorAll(".color");
 const currentProductSizes = document.querySelectorAll(".size");
-
+const productButton = document.querySelector(".productButton")
+const payment = document.querySelector(".payment")
+const close = document.querySelector(".close")
 
 
 
@@ -142,4 +144,13 @@ currentProductSizes.forEach((size,index)=>{
         size.style.backgroundColor = 'black'
         size.style.color = 'white'
     })
+})
+
+
+productButton.addEventListener('click', ()=>{
+    payment.style.display = 'flex';
+});
+
+close.addEventListener('click', ()=>{
+    payment.style.display ='none'
 })
