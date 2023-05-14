@@ -2,90 +2,90 @@ const wrapper = document.querySelector(".sliderWrapper")
 const menuItems = document.querySelectorAll(".menuItem")
 
 
-const products =[
+const products = [
     {
-        id :1 ,
+        id: 1,
         title: "Air Force",
         price: 119,
         colors: [
             {
-              code : "black",
-              img : "./img/air.png"
+                code: "black",
+                img: "./img/air.png"
             },
-        
-           {
-            code : "darkblue",
-            img : "./img/air2.png"
-           }
+
+            {
+                code: "darkblue",
+                img: "./img/air2.png"
+            }
         ],
     },
     {
-        id :2 ,
+        id: 2,
         title: "Air Jordan",
         price: 149,
         colors: [
             {
-              code : "lightgray",
-              img : "./img/jordan.png"
+                code: "lightgray",
+                img: "./img/jordan.png"
             },
-        
-           {
-            code : "green",
-            img : "./img/jordan2.png"
-           }
+
+            {
+                code: "green",
+                img: "./img/jordan2.png"
+            }
         ],
     },
     {
-        id :3 ,
+        id: 3,
         title: "Blazer",
         price: 109,
         colors: [
             {
-              code : "wlightgray",
-              img : "./img/blazer.png"
+                code: "wlightgray",
+                img: "./img/blazer.png"
             },
-        
-           {
-            code : "green",
-            img : "./img/blazer2.png"
-           }
+
+            {
+                code: "green",
+                img: "./img/blazer2.png"
+            }
         ],
     },
     {
-        id :4 ,
+        id: 4,
         title: "Crater",
         price: 129,
         colors: [
             {
-              code : "black",
-              img : "./img/crater.png"
+                code: "black",
+                img: "./img/crater.png"
             },
-        
-           {
-            code : "lightgray",
-            img : "./img/crater2.png"
-           }
+
+            {
+                code: "lightgray",
+                img: "./img/crater2.png"
+            }
         ],
     },
     {
-        id :5 ,
+        id: 5,
         title: "Hippie",
         price: 99,
         colors: [
             {
-              code : "gray",
-              img : "./img/hippie.png"
+                code: "gray",
+                img: "./img/hippie.png"
             },
-        
-           {
-            code : "black",
-            img : "./img/hippie2.png"
-           }
+
+            {
+                code: "black",
+                img: "./img/hippie2.png"
+            }
         ],
-    }    
+    }
 ]
-    
-        
+
+
 let choosenProduct = products[0];
 const currentProductImg = document.querySelector(".productImg");
 const currentProductTitle = document.querySelector(".productTitle");
@@ -113,45 +113,46 @@ menuItems.forEach((item, index) => {
 
         //Change texts of currentProducts
         currentProductTitle.textContent = choosenProduct.title;
-        currentProductPrice.textContent = "$" +choosenProduct.price;
+        currentProductPrice.textContent = "$" + choosenProduct.price;
         currentProductImg.src = choosenProduct.colors[0].img;
 
         //assig new colors
-        currentProductColors.forEach((color,index) => {
+        currentProductColors.forEach((color, index) => {
             color.style.backgroundColor = choosenProduct.colors[index].code;
         });
-        
-        
+
+
         itemPrev.classList.remove("active")
         item.classList.add("active")
     })
 });
 
 currentProductColors.forEach((color, index) => {
-    color.addEventListener("click", ()=> {
+    color.addEventListener("click", () => {
 
         currentProductImg.src = choosenProduct.colors[index].img;
     })
 });
 
-currentProductSizes.forEach((size,index)=>{
-    size.addEventListener("click", ()=>{
-        currentProductSizes.forEach((size)=>{
+currentProductSizes.forEach((size, index) => {
+    size.addEventListener("click", () => {
+        currentProductSizes.forEach((size) => {
             size.style.backgroundColor = 'white'
             size.style.color = 'black'
         })
-        
+
         size.style.backgroundColor = 'black'
         size.style.color = 'white'
     })
 })
 
 
-productButton.addEventListener('click', ()=>{
-    payment.style.display = 'flex';
+productButton.addEventListener('click', () => {
+    payment.style.opacity = 1;
+    console.log("oz");
 });
 
-close.addEventListener('click', ()=>{
-    payment.style.display ='none'
+close.addEventListener('click', () => {
+    payment.style.opacity = 0
 })
 
