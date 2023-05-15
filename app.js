@@ -149,10 +149,12 @@ currentProductSizes.forEach((size, index) => {
 
 productButton.addEventListener('click', () => {
     payment.style.opacity = 1;
+    payment.style.zIndex = 1;
     console.log("oz");
 });
 
 close.addEventListener('click', () => {
     payment.style.opacity = 0
+    payment.style.zIndex = -1;
 })
 
